@@ -1,24 +1,31 @@
-# Compiled class file
-*.class
+import java.util.Random;
+import java.util.Scanner;
+class Daice{
+public static void main(String[] args){
+Scanner sc = new Scanner(System.in);
 
-# Log file
-*.log
+System.out.println("What is your name?");
+String a = sc.next();
+System.out.println("Hello"+","+a+"!");
+System.out.println("Rolling the dice...");
 
-# BlueJ files
-*.ctxt
+Random rand = new Random();
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+int daice1 = rand.nextInt(6)+1;
+int daice2 = rand.nextInt(6)+1;
+System.out.println("Dai 1:"+ daice1);
+System.out.println("Dai 2:"+ daice2);
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+int ans = daice1+daice2;
+System.out.println("total value : "+ans);
+if(ans>7){
+    System.out.println(a+" won!");
+}
+    else{
+        System.out.println(a+" lost!");
+    }
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+
+}
+
+}
